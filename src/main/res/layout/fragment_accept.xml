@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Card Number Field -->
+    <EditText
+        android:id="@+id/card_number_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/card_number"
+        android:inputType="number"
+        android:importantForAutofill="no"
+        android:maxLength="19"
+        android:imeOptions="actionNext" />
+
+    <!-- Expiry Date Field -->
+    <EditText
+        android:id="@+id/expiry_date_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/expiry_date"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        android:maxLength="5"
+        android:imeOptions="actionNext" />
+
+    <!-- CVV Security Code Field - FIXED -->
+    <EditText
+        android:id="@+id/security_code_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="@string/cvv"
+        android:imeOptions="actionNext"
+        android:inputType="numberPassword"
+        android:importantForAutofill="no"
+        android:maxLength="3" />
+
+    <!-- Additional Fields -->
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit" />
+
+</LinearLayout>
