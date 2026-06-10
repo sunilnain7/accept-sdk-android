@@ -78,7 +78,8 @@ public class AcceptSDKParser {
     stringer.endObject();
     stringer.endObject();
 
-    LogUtil.log(LOG_LEVEL.INFO, "getJsonFromEncryptTransaction : " + stringer.toString());
+    // Sensitive payment data removed from logs per CWE-532 security requirement
+    LogUtil.log(LOG_LEVEL.INFO, "getJsonFromEncryptTransaction: request prepared");
     return stringer.toString();
   }
 

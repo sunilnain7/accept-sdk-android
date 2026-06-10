@@ -117,7 +117,8 @@ public class AcceptService extends IntentService {
           || responseCode == HttpsURLConnection.HTTP_CREATED) {
 
         String responseString = SDKUtils.convertStreamToString(urlConnection.getInputStream());
-        LogUtil.log(LOG_LEVEL.INFO, " response string :" + responseString);
+        // Sensitive payment token removed from logs per CWE-532 security requirement
+        LogUtil.log(LOG_LEVEL.INFO, "Transaction response received, HTTP status: " + responseCode);
         TransactionResponse response =
             AcceptSDKParser.createEncryptionTransactionResponse(responseString);
          /* COMMENT: Check Result code.
