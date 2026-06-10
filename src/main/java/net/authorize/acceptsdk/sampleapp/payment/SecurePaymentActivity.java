@@ -1,8 +1,8 @@
 package net.authorize.acceptsdk.sampleapp.payment;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.widget.EditText;
-import androidx.appcompat.app.AppCompatActivity;
 import net.authorize.acceptsdk.R;
 import net.authorize.acceptsdk.security.PaymentSecurityUtil;
 
@@ -15,7 +15,7 @@ import net.authorize.acceptsdk.security.PaymentSecurityUtil;
  * - Properly masks sensitive input fields
  * - Prevents screenshots and screen recording
  */
-public class SecurePaymentActivity extends AppCompatActivity {
+public class SecurePaymentActivity extends Activity {
     
     private EditText cardNumberView;
     private EditText expiryDateView;

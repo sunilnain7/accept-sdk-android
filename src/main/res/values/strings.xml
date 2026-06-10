@@ -1,3 +1,7 @@
 <resources>
   <string name="app_name">Accept-Android-SDK</string>
+  <string name="card_number">Card Number</string>
+  <string name="expiry_date">MM/YY</string>
+  <string name="cvv">CVV</string>
+  <string name="submit">Submit Payment</string>
 </resources>
